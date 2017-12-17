@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BdESWG2ModelStoreContainer" CdmEntityContainer="BdESWG2Entities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="BdESWG2Model.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="BdESWG2Model.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="admins_id" ColumnName="admins_id" />
+          <ScalarProperty Name="admins_name" ColumnName="admins_name" />
+          <ScalarProperty Name="admins_dob" ColumnName="admins_dob" />
+          <ScalarProperty Name="admins_country_id" ColumnName="admins_country_id" />
+          <ScalarProperty Name="admins_email" ColumnName="admins_email" />
+          <ScalarProperty Name="admins_password" ColumnName="admins_password" />
+          <ScalarProperty Name="admins_role" ColumnName="admins_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="BdESWG2Model.Application">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="applications_id" ColumnName="applications_id" />
+          <ScalarProperty Name="applications_user_id" ColumnName="applications_user_id" />
+          <ScalarProperty Name="applications_university_id" ColumnName="applications_university_id" />
+          <ScalarProperty Name="applications_mobility_program_id" ColumnName="applications_mobility_program_id" />
+          <ScalarProperty Name="applications_status" ColumnName="applications_status" />
+          <ScalarProperty Name="applications_scholarship" ColumnName="applications_scholarship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoleClaims">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetRoleClaim">
+        <MappingFragment StoreEntitySet="AspNetRoleClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
+          <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
+          <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserTokens">
+      <EntityTypeMapping TypeName="BdESWG2Model.AspNetUserToken">
+        <MappingFragment StoreEntitySet="AspNetUserTokens">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="BdESWG2Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Helps">
+      <EntityTypeMapping TypeName="BdESWG2Model.Help">
+        <MappingFragment StoreEntitySet="Help">
+          <ScalarProperty Name="help_id" ColumnName="help_id" />
+          <ScalarProperty Name="help_message" ColumnName="help_message" />
+          <ScalarProperty Name="help_name" ColumnName="help_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interviews">
+      <EntityTypeMapping TypeName="BdESWG2Model.Interview">
+        <MappingFragment StoreEntitySet="Interview">
+          <ScalarProperty Name="interview_id" ColumnName="interview_id" />
+          <ScalarProperty Name="interview_admin_id" ColumnName="interview_admin_id" />
+          <ScalarProperty Name="interview_users_id" ColumnName="interview_users_id" />
+          <ScalarProperty Name="interview_date" ColumnName="interview_date" />
+          <ScalarProperty Name="interview_subject" ColumnName="interview_subject" />
+          <ScalarProperty Name="interview_time" ColumnName="interview_time" />
+          <ScalarProperty Name="interview_room" ColumnName="interview_room" />
+          <ScalarProperty Name="interview_place" ColumnName="interview_place" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobilityPrograms">
+      <EntityTypeMapping TypeName="BdESWG2Model.MobilityProgram">
+        <MappingFragment StoreEntitySet="MobilityProgram">
+          <ScalarProperty Name="mobilityprog_id" ColumnName="mobilityprog_id" />
+          <ScalarProperty Name="mobilityprog_name" ColumnName="mobilityprog_name" />
+          <ScalarProperty Name="mobilityprog_type" ColumnName="mobilityprog_type" />
+          <ScalarProperty Name="mobilityprog_init_date" ColumnName="mobilityprog_init_date" />
+          <ScalarProperty Name="mobilityprog_end_date" ColumnName="mobilityprog_end_date" />
+          <ScalarProperty Name="mobilityprog_degree" ColumnName="mobilityprog_degree" />
+          <ScalarProperty Name="mobilityprog_academic_year" ColumnName="mobilityprog_academic_year" />
+          <ScalarProperty Name="mobilityprog_semester" ColumnName="mobilityprog_semester" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="BdESWG2Model.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="notifications_id" ColumnName="notifications_id" />
+          <ScalarProperty Name="notifications_subject" ColumnName="notifications_subject" />
+          <ScalarProperty Name="notifications_text" ColumnName="notifications_text" />
+          <ScalarProperty Name="notifications_users_id" ColumnName="notifications_users_id" />
+          <ScalarProperty Name="notifications_admin_id" ColumnName="notifications_admin_id" />
+          <ScalarProperty Name="notifications_events_id" ColumnName="notifications_events_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ocurrences">
+      <EntityTypeMapping TypeName="BdESWG2Model.Ocurrence">
+        <MappingFragment StoreEntitySet="Ocurrences">
+          <ScalarProperty Name="ocurrences_id" ColumnName="ocurrences_id" />
+          <ScalarProperty Name="ocurrences_title" ColumnName="ocurrences_title" />
+          <ScalarProperty Name="ocurrences_description" ColumnName="ocurrences_description" />
+          <ScalarProperty Name="ocurrences_image" ColumnName="ocurrences_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universities">
+      <EntityTypeMapping TypeName="BdESWG2Model.University">
+        <MappingFragment StoreEntitySet="University">
+          <ScalarProperty Name="university_id" ColumnName="university_id" />
+          <ScalarProperty Name="university_country_id" ColumnName="university_country_id" />
+          <ScalarProperty Name="university_name" ColumnName="university_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BdESWG2Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+          <ScalarProperty Name="users_name" ColumnName="users_name" />
+          <ScalarProperty Name="users_number" ColumnName="users_number" />
+          <ScalarProperty Name="users_email" ColumnName="users_email" />
+          <ScalarProperty Name="users_password" ColumnName="users_password" />
+          <ScalarProperty Name="users_dob" ColumnName="users_dob" />
+          <ScalarProperty Name="users_country_id" ColumnName="users_country_id" />
+          <ScalarProperty Name="users_credits" ColumnName="users_credits" />
+          <ScalarProperty Name="users_diseases" ColumnName="users_diseases" />
+          <ScalarProperty Name="users_mobility" ColumnName="users_mobility" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="BdESWG2Model.database_firewall_rules">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="BdESWG2Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
