@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using projetoesw3rd.Models;
+using System.Data.SqlClient;
 
 namespace projetoesw3rd.Controllers
 {
@@ -73,22 +74,23 @@ namespace projetoesw3rd.Controllers
                 return View(model);
             }
 
+            SqlConnection scn = new SqlConnection("Data Source=eswg2server.database.windows.net;Initial Catalog=BdESWG2;Integrated Security=False;User ID=grupo2esw;Password=Batatamovel!;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand scmd = new SqlCommand("select count (*) as cnt from [Users] where [Users].[users_number]=@usr and [Users].[users_password]=@pwd", scn);
+            scmd.Parameters.Clear();
+            scmd.Parameters.AddWithValue("@usr", model.ID);
+            scmd.Parameters.AddWithValue("@pwd", model.Password);
+            scn.Open();
+
+            if (scmd.ExecuteScalar().ToString() == "1")
+            {
+                return RedirectToLocal(returnUrl);
+            }
+
             // Isso não conta falhas de login em relação ao bloqueio de conta
             // Para permitir que falhas de senha acionem o bloqueio da conta, altere para shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
-            {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Tentativa de login inválida.");
-                    return View(model);
-            }
+            var result = await SignInManager.PasswordSignInAsync(model.ID, model.Password,model.Gravar, shouldLockout: false);
+              return View(model);
+            
         }
 
         //

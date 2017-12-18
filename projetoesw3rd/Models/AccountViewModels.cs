@@ -49,17 +49,16 @@ namespace projetoesw3rd.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Identificação")]
+        public string ID { get; set; }
 
         [Required]
+        [Display(Name = "Palavra-Chave")]
         [DataType(DataType.Password)]
-        [Display(Name = "Senha")]
         public string Password { get; set; }
 
-        [Display(Name = "Lembrar-me?")]
-        public bool RememberMe { get; set; }
+        [Display(Name = "Gravar Dados?")]
+        public bool Gravar { get; set; }
     }
 
     public class RegisterViewModel
