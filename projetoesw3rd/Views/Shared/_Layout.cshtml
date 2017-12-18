@@ -229,12 +229,12 @@
                     but hey, it's pure CSS magic.
                     -->
                     <ul id="menu">
-                        <a href="Home/Index"><li>Inicio</li></a>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <a href="#"><li>Perfil Pessoal</li></a>
                         <a href="#"><li>Candidaturas</li></a>
                         <a href="#"><li>Entrevistas</li></a>
                         <a href="#"><li>Parceiros</li></a>
-                        <a href="Home/Login"><li>Login</li></a>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
                     </ul>
                 </div>
             </nav>
