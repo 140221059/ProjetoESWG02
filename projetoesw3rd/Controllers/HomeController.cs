@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace projetoesw3rd.Controllers
 {
@@ -56,6 +57,15 @@ namespace projetoesw3rd.Controllers
                 {
                     Session["users_id"] = details.FirstOrDefault().users_id;
                     Session["users_number"] = details.FirstOrDefault().users_number;
+
+                    FormsAuthentication.SetAuthCookie(Session["users_number"].ToString(), false);
+
+                    var authTicket = new FormsAuthenticationTicket(1, Session["users_number"].ToString(), DateTime.Now, DateTime.Now.AddMinutes(20), false, Session["users_id"].ToString());
+                    //   string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
+                    // var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                    var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, authTicket.ToString());
+                    HttpContext.Response.Cookies.Add(authCookie);
+
                     return RedirectToAction("Welcome", "Home");
                 }
             }
@@ -73,7 +83,16 @@ namespace projetoesw3rd.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            if (Session["users_number"].ToString() == null)
+            {
+                ViewBag.Message = "Your application description page.";
+
+            }
+            else
+            {
+                ViewBag.Message = "Your application description";
+
+            }
 
             return View();
         }
