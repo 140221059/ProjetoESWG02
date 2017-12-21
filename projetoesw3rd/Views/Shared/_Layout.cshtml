@@ -15,12 +15,10 @@
         }
 
         header {
-            top:0;
-            width:100%;
-        }
-
-        #menuzao {
-            margin-top: 73px;
+            top: 0;
+            width: 100%;
+            background-color: #eee;
+            margin-bottom: 30px;
         }
 
         ul {
@@ -28,15 +26,15 @@
         }
 
         table {
-            margin-left: 1045px;
-            margin-top: -100px;
-            width: 450px;
+            margin-left: 970px;
+            width: 390px;
+            margin-top: -28px;
         }
 
         .month {
             padding: 50px 25px;
             width: 100%;
-            background: #1abc9c;
+            background: #9DC3E6;
             text-align: center;
         }
 
@@ -49,7 +47,6 @@
                     color: white;
                     font-size: 20px;
                     text-transform: uppercase;
-                    letter-spacing: 3px;
                 }
 
             .month .prev {
@@ -75,7 +72,6 @@
             }
 
         .days {
-            padding: 10px 0;
             background: #eee;
             margin: 0;
         }
@@ -91,8 +87,7 @@
             }
 
                 .days li .active {
-                    padding: 5px;
-                    background: #1abc9c;
+                    background: #9DC3E6;
                     color: white !important
                 }
 
@@ -106,6 +101,7 @@
             background: white;
             color: #cdcdcd;
             font-family: "Avenir Next", "Avenir", sans-serif;
+            overflow-x: hidden;
         }
 
         a {
@@ -123,7 +119,7 @@
         #menuToggle {
             display: block;
             position: relative;
-            top: 0px;
+            top: 70px;
             left: 35px;
             z-index: 1;
             -webkit-user-select: none;
@@ -201,7 +197,7 @@
             margin: -100px 0 0 -50px;
             padding: 50px;
             padding-top: 125px;
-            background: #ededed;
+            background: #eee;
             list-style-type: none;
             -webkit-font-smoothing: antialiased;
             /* to stop flickering of text in safari */
@@ -224,17 +220,29 @@
         #imgBanner {
             width: 50%;
             margin-left: 285px;
-            margin-top: -100px;
             position: absolute;
+            height: 270px;
         }
+        #footerLine, #headerLine {
+            width: 190%;
+            border-color: #9DC3E6;
+        }
+
+
+        footer {
+            text-align: right;
+            margin-right: 2%;
+            color: black;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        
     </style>
 </head>
 
 
-
 <body>
     <header>
-        <div id="menuzao">
             <nav role="navigation">
                 <div id="menuToggle">
                     <!--
@@ -264,7 +272,6 @@
                     </ul>
                 </div>
             </nav>
-        </div>
         <div id="banner">
             <img id="imgBanner" src="~/images/baner.png" alt="Baner">
         </div>
@@ -326,13 +333,15 @@
                 </ul>
             </th>
         </table>
+        <hr id="headerLine" />
     </header>
     <div class="container body-content">
         @RenderBody()
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Instituto Politécnico de Setúbal</p>
-        </footer>
-    </div>
+    </div>    
+    <hr id="footerLine" />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Instituto Politécnico de Setúbal</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
