@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\projetoesw3rd",
+    "\\projetoesw3rd\\Controllers",
+    "\\projetoesw3rd\\Views",
+    "\\projetoesw3rd\\Views\\Home"
   ],
-  "SelectedNode": "\\projetoesw3rd.sln",
+  "SelectedNode": "\\projetoesw3rd\\Views\\Home\\UserProfile.cshtml",
   "PreviewInSolutionExplorer": false
 }
