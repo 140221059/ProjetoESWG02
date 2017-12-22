@@ -81,9 +81,15 @@ namespace projetoesw3rd.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            Session["users_number"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult About()
         {
-            if (Session["users_number"].ToString() == null)
+            if (Session["users_number"]== null)
             {
                 ViewBag.Message = "Your application description page.";
 

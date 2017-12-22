@@ -394,6 +394,7 @@ namespace projetoesw3rd.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Session["users_number"] = null;
             return RedirectToAction("Index", "Home");
         }
 

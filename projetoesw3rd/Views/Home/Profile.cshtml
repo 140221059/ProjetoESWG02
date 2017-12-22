@@ -1,0 +1,42 @@
+﻿@model projetoesw3rd.Models.User
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+        <table>
+            <tr>
+                <th>
+                    Firstname
+                </th>
+                <th>
+                    Lastname
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Starts
+                </th>
+                <th>
+                    Wins
+                </th>
+            </tr>
+            
+            </table>
+</div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
