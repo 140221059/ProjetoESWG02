@@ -26,7 +26,7 @@ namespace projetoesw3rd.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(User reg)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 db.Users.Add(reg);
                 db.SaveChanges();
@@ -51,12 +51,30 @@ namespace projetoesw3rd.Controllers
                                select new
                                {
                                    userlist.users_id,
-                                   userlist.users_number
+                                   userlist.users_number,
+                                   userlist.users_name,
+                                   userlist.users_country_id,
+                                   userlist.users_credits,
+                                   userlist.users_diseases,
+                                   userlist.users_dob,
+                                   userlist.users_email,
+                                   userlist.users_mobility,
+                                   userlist.users_password
+
                                }).ToList();
                 if (details.FirstOrDefault() != null)
                 {
                     Session["users_id"] = details.FirstOrDefault().users_id;
                     Session["users_number"] = details.FirstOrDefault().users_number;
+                    Session["users_name"] = details.FirstOrDefault().users_name;
+                    Session["users_country_id"] = details.FirstOrDefault().users_country_id;
+                    Session["users_credits"] = details.FirstOrDefault().users_credits;
+                    Session["users_diseases"] = details.FirstOrDefault().users_diseases;
+                    Session["users_dob"] = details.FirstOrDefault().users_dob;
+                    Session["users_email"] = details.FirstOrDefault().users_email;
+                    Session["users_mobility"] = details.FirstOrDefault().users_mobility;
+                    Session["users_password"] = details.FirstOrDefault().users_password;
+
 
                     FormsAuthentication.SetAuthCookie(Session["users_number"].ToString(), false);
 
@@ -81,6 +99,11 @@ namespace projetoesw3rd.Controllers
             return View();
         }
 
+        public ActionResult UserProfile()
+        {
+            return View();
+        }
+
         public ActionResult Logout()
         {
             Session["users_number"] = null;
@@ -89,7 +112,7 @@ namespace projetoesw3rd.Controllers
 
         public ActionResult About()
         {
-            if (Session["users_number"]== null)
+            if (Session["users_number"] == null)
             {
                 ViewBag.Message = "Your application description page.";
 
