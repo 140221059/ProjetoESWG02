@@ -1,51 +1,60 @@
-﻿@{
+﻿<style>
+    .form-horizontal {
+        text-align: center;
+        color: black;
+    }
+
+</style>
+
+
+@{
     ViewBag.Title = "UserProfile";
 }
 
-<h2>User Profile</h2>
+
     
-    <div class="form-horizontal">
-        <h4>User</h4>
-        <hr />
-        <table>
-            <tr>
-                <th>Number: </th>
-                <th>@Session["users_number"].ToString()</th>
-            </tr>
-           <tr>
-                <th>Name: </th>
-                <th>@Session["users_name"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Country: </th>
-                <th>@Session["users_country_id"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Credits: </th>
-                <th>@Session["users_credits"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Illnesses &amp; Allergies: </th>
-                <th>@Session["users_diseases"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Date of birth: </th>
-                <th>@Session["users_dob"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Email: </th>
-                <th>@Session["users_email"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Mobility: </th>
-                <th>@Session["users_mobility"].ToString()</th>
-            </tr>
-            <tr>
-                <th>Password: </th>
-                <th>@Session["users_password"].ToString()</th>
-            </tr>
-        </table>
-    </div>
+    <div class="form-horizontal" >
+        <h2>User Profile</h2>
+        <br />
+            <table align="center">
+                <tr>
+                    <th>Number: </th>
+                    <th>@Session["users_number"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Name: </th>
+                    <th>@Session["users_name"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Country: </th>
+                    <th>@Session["users_country_id"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Credits: </th>
+                    <th>@Session["users_credits"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Illnesses &amp; Allergies: </th>
+                    <th>@Session["users_diseases"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Date of birth: </th>
+                    <th>@Session["users_dob"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Email: </th>
+                    <th>@Session["users_email"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Mobility: </th>
+                    <th>@Session["users_mobility"].ToString()</th>
+                </tr>
+                <tr>
+                    <th>Password: </th>
+                    <th>@Session["users_password"].ToString()</th>
+                </tr>
+            </table>
+        </div>
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
